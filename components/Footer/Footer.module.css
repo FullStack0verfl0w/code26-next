@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 180px;
+    padding: 35px;
+    background-color: var(--main-black);
+}
+
+.footerLogo {
+    display: flex;
+    flex-direction: column;
+
+}
+.footerLogoCopy {
+    margin-top: 30px;
+}
+.footerLogoCopy span {
+    display: block;
+    font-family: "Courier New", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-align: center;
+    color: #fff;
+}
+.footerContacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.footerContacts h1 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+}
+.footerContactsList {
+    list-style: none;
+    padding: 0;
+}
+.footerContactsList li * {
+    font-family: "Courier New", sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footerContactsList li a {
+    transition: color .1s var(--ease-in-out);
+}
+.footerContactsList li a:hover {
+    color: #aaa;
+}

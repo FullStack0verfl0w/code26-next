@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Lato&display=swap');
+
+* {
+
+    --main-black: #2b2828;
+    --dark-crimson: #ac1b1a;
+    --light-violet: #585dec;
+    --ziggurat: #7ea9ac;
+    --quicksand: #c39885;
+
+    --ease-in-out: cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
