@@ -1,14 +1,18 @@
 import { FC } from "react";
+import styles from "./Logo.module.css";
+import classNames from "classnames";
 
 export type LogoProps = {
     color: string,
+    enableHover?: boolean,
 };
 
 const Logo: FC<LogoProps> = (props: LogoProps) => {
-    const { color } = props;
+    const { color, enableHover } = props;
 
     return (
         <svg
+            className={classNames([{ [styles.logo]: enableHover }])}
             xmlns="http://www.w3.org/2000/svg"
             width="283px" height="42px">
             <path fillRule="evenodd" fill={color}
@@ -16,5 +20,9 @@ const Logo: FC<LogoProps> = (props: LogoProps) => {
         </svg>
     );
 };
+
+Logo.defaultProps = {
+    enableHover: false,
+}
 
 export default Logo;

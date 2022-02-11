@@ -12,7 +12,7 @@ const Home: NextPage<FooterProps> = (props: FooterProps) => {
     return (
         <div className="mainContainer">
             <Header />
-            <main>
+            <main style={{display: "flex",flexDirection: "column", alignItems: "center"}}>
                 <About />
                 <Stack />
                 <Projects />

@@ -14,7 +14,10 @@ const BurgerButton: FC<BurgerButtonProps> = (props: BurgerButtonProps) => {
         <button className={styles.burgerButton} onClick={onClick}>
         <div className={classNames([styles.burgerButtonContainer, { [styles.burgerButtonContainerOpened]: state }])}>
             <span className={styles.burgerButtonContainerElements} />
-            <span className={styles.burgerButtonContainerElements} />
+            <div className={styles.burgerButtonContainerElementsMiddle}>
+                <span className={styles.burgerButtonContainerElementMiddle} />
+                <span className={styles.burgerButtonContainerElementMiddle} />
+            </div>
             <span className={styles.burgerButtonContainerElements} />
         </div>
         </button>

@@ -1,5 +1,12 @@
 .projects {
     display: flex;
+    justify-content: center;
+}
+.projectsContainer {
+    display: flex;
     flex-direction: column;
     align-items: center;
+
+    max-width: 1200px;
+    padding: 0 16px 0 16px;
 }

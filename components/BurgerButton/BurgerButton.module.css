@@ -1,17 +1,27 @@
 .burgerButton {
     width: 48px;
     height: 48px;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     background: none;
-    border: none;
+    border: 2px solid var(--main-black);
+    border-radius: 50%;
     cursor: pointer;
     margin: 0 16px 0 16px;
     padding: 0;
+
+    transition: all .1s var(--ease-in-out);
+}
+.burgerButton:active {
+    opacity: .75;
+    background-color: #0005;
 }
 .burgerButtonContainer {
-    width: 100%;
-    height: 100%;
+    width: 28px;
+    height: 28px;
 
     display: flex;
     flex-direction: column;
@@ -19,22 +29,45 @@
 }
 .burgerButtonContainerElements {
     width: 100%;
-    height: 4px;
+    height: 3px;
 
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: var(--main-black);
 
     transition: all .2s var(--ease-in-out);
 }
 
 .burgerButtonContainerOpened .burgerButtonContainerElements:first-child {
-    transform-origin: left;
-    transform: rotateZ(45deg) translateX(-1px);
+    opacity: 0;
 }
-.burgerButtonContainerOpened .burgerButtonContainerElements:nth-child(2) {
-    background-color: transparent;
+.burgerButtonContainerElementsMiddle {
+    height: 3px;
+    position: relative;
+}
+.burgerButtonContainerElementMiddle {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    border-radius: 3px;
+    background-color: var(--main-black);
+
+    transform-origin: center;
+    transition: all .2s var(--ease-in-out);
+}
+.burgerButtonContainerOpened .burgerButtonContainerElementMiddle:first-child {
+    transform: rotateZ(45deg);
+}
+.burgerButtonContainerOpened .burgerButtonContainerElementMiddle:last-child {
+    transform: rotateZ(-45deg);
 }
 .burgerButtonContainerOpened .burgerButtonContainerElements:last-child {
-    transform-origin: left;
-    transform: rotateZ(-45deg) translateX(-1px);
+    opacity: 0;
+}
+@media (min-width: 780px) {
+    .burgerButton {
+        display: none;
+    }
 }

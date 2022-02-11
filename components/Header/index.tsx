@@ -15,11 +15,13 @@ const Header: FC<HeaderProps> = (props: HeaderProps) => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.headerTop}>
-                <Logo color="#2b2828"/>
-                <BurgerButton onClick={onBurgerClick} state={burgerState}/>
+            <div className={styles.headerContainer}>
+                <div className={styles.headerTop}>
+                    <Logo color="#2b2828"/>
+                    <BurgerButton onClick={onBurgerClick} state={burgerState}/>
+                </div>
+                <HeaderNavigation state={burgerState} />
             </div>
-            <HeaderNavigation state={burgerState} />
         </header>
     );
 };

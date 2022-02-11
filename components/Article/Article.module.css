@@ -1,0 +1,41 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articleMain {
+    max-width: 620px;
+    padding: 30px 0 30px 0;
+}
+
+.articleMain h1 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main-black);
+    margin: 0;
+}
+
+.articleMain p {
+    font-family: "Courier New", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 28px;
+}
+.articleImage {
+    max-height: 480px;
+}
+
+.articleImage img {
+    height: 480px;
+}
+
+@media (min-width: 900px) {
+    .article {
+        max-width: 1200px;
+        width: 95vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

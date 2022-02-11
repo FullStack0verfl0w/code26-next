@@ -1,13 +1,27 @@
 .linkButton {
+    width: 100%;
+
     border: 2px solid var(--dark-crimson);
+    display: inline-block;
     color: var(--dark-crimson);
     font-family: "Lato", sans-serif;
     font-size: 24px;
+    text-align: center;
     padding: 9px 18px 9px 18px;
 
     transition: transform .2s var(--ease-in-out);
 }
 
 .linkButton:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.linkButton:active {
+    transform: scale(.95);
+}
+
+@media (min-width: 900px) {
+    .linkButton {
+        width: auto;
+    }
 }
