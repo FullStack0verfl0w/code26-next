@@ -41,7 +41,7 @@ const drawPath = (svg, path, startX, startY, endX, endY) => {
     );
 };
 
-window.connectElements = (container, svg, path, startElem, endElem) => {
+window.connectElements = (svg, path, startElem, endElem) => {
     // if first element is lower than the second, swap!
     if (
         startElem.getBoundingClientRect().top > endElem.getBoundingClientRect().top
@@ -52,8 +52,8 @@ window.connectElements = (container, svg, path, startElem, endElem) => {
     }
 
     // get (top, left) corner coordinates of the svg container
-    const svgTop = container.getBoundingClientRect().top;
-    const svgLeft = container.getBoundingClientRect().left;
+    const svgTop = svg.getBoundingClientRect().top;
+    const svgLeft = svg.getBoundingClientRect().left;
 
     // get (top, left) coordinates for the two elements
     const startCoord = startElem.getBoundingClientRect();

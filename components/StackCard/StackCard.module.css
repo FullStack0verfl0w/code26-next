@@ -1,6 +1,7 @@
 .stackCard {
     max-width: 320px;
     min-height: 128px;
+    background-color: #fff;
 
     border-radius: 24px;
     overflow: hidden;
@@ -27,4 +28,10 @@
     font-family: "Courier New", sans-serif;
     font-size: 20px;
     line-height: 36px;
+}
+
+@media (max-width: 900px) {
+    .stackCard {
+        position: static !important;
+    }
 }

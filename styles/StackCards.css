@@ -1,0 +1,17 @@
+
+#STACK_CARD_WEB {
+    position: absolute;
+    left: 80px;
+    top: 180px;
+}
+
+#STACK_CARD_MOBILE {
+    position: absolute;
+    right: 80px;
+    top: 180px;
+}
+
+#STACK_CARD_SCRAPING {
+    position: absolute;
+    bottom: -180px;
+}
