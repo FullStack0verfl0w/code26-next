@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
 
     background: none;
     border: 2px solid var(--main-black);

@@ -5,6 +5,8 @@
     width: 100vw;
     max-width: 1200px;
     min-height: 640px;
+
+    padding: 0 16px 0 16px;
 }
 
 .stackCardContainer {

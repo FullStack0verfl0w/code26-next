@@ -1,8 +1,11 @@
 .logo {
+    max-height: 42px;
+}
+.logoHover {
     cursor: pointer;
 }
 
-.logo:hover {
+.logoHover:hover {
     animation: flashing linear .6s infinite;
 }
 
