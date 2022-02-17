@@ -33,5 +33,6 @@
 @media (max-width: 900px) {
     .stackCard {
         position: static !important;
+        margin: 16px 0 16px 0;
     }
 }

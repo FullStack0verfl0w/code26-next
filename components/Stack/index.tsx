@@ -54,29 +54,47 @@ const Stack: FC<StackProps> = (props: StackProps) => {
                 }
             </div>
             <Script src="leader-line.min.js" strategy="afterInteractive" onLoad={() => {
-                const lines = STACK.map((val) => {
-                    const start = document.querySelector("#STACK_CARD_MAIN");
-                    const end = document.querySelector(`#${val.id}`);
-                    //@ts-ignore
-                    return new LeaderLine(
+                //@ts-ignore
+                let lines = [];
+
+                const drawLines = () => {
+                    lines = STACK.map((val) => {
+                        const start = document.querySelector("#STACK_CARD_MAIN");
+                        const end = document.querySelector(`#${val.id}`);
                         //@ts-ignore
-                        val.start ? LeaderLine.pointAnchor(start, val.start) : start,
-                        //@ts-ignore
-                        end,
-                        {
-                            path: "fluid",
-                            startPlugColor: "#7ea9ac",
-                            endPlugColor: val.color,
-                            gradient: true,
-                            startPlug: "disc",
-                            endPlug: "disc",
-                        }
-                    );
-                });
+                        return new LeaderLine(
+                            //@ts-ignore
+                            val.start ? LeaderLine.pointAnchor(start, val.start) : start,
+                            //@ts-ignore
+                            end,
+                            {
+                                path: "fluid",
+                                startPlugColor: "#7ea9ac",
+                                endPlugColor: val.color,
+                                gradient: true,
+                                startPlug: "disc",
+                                endPlug: "disc",
+                            }
+                        );
+                    });
+                };
+                if ( window.innerWidth >= 900 ) {
+                    drawLines();
+                }
 
                 window.addEventListener('resize', function(e){
                     if ( window.innerWidth <= 900 ) {
-
+                        //@ts-ignore
+                        lines.forEach((val, i) => {
+                            val.remove();
+                            //@ts-ignore
+                            lines.splice(i, 1);
+                        })
+                    }
+                    else {
+                        if ( lines.length == 0 ) {
+                            drawLines();
+                        }
                     }
                 });
             }} />
