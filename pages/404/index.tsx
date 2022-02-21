@@ -19,9 +19,8 @@ const NotFound: FC<NotFoundProps> = (props: NotFoundProps) => {
                 <div className={styles.errorContainer}>
                     <span className={styles.errorTextBold}>404</span>
                     <span className={styles.errorText}>Sorry, but this page doesn&apos;t exist.</span>
-                    <Link href="/" passHref>
-                        <a className={styles.backButton}>Back to Home</a>
-                    </Link>
+                    {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                    <a href="/" className={styles.backButton}>Back to Home</a>
                 </div>
             </main>
         </>
