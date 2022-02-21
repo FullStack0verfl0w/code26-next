@@ -2,10 +2,10 @@ import { FC, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import styles from "./Footer.module.css";
 
-export type FooterProps = {
+export interface FooterProps {
     year: number,
     email: string,
-};
+}
 
 const Footer: FC<FooterProps> = (props: FooterProps) => {
     const { year, email } = props;
