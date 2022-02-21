@@ -30,10 +30,6 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
                 <meta name="twitter:description" content="Full stack and mobile development using the latest technologies" />
                 <meta name="twitter:card" content="photo" />
                 <meta name="twitter:image" content={`${host}/logo.png`} />
-
-                <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-
-                <link rel="icon" href="favicon.png" />
             </Head>
 
             <div className="mainContainer">
